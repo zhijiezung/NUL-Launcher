@@ -3,6 +3,8 @@ package com.xhh.launcher.custom.activity.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +20,9 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
 
 public class BugActivity extends AppCompatActivity {
 
+    private CollapsingToolbarLayout collapsingToolbarLayout;
     private AppBarLayout appBarLayout;
+    private Toolbar toolbar;
     private AppCompatTextView textDetial;
     private FloatingActionButton fabSend;
     private FloatingActionButton fabSendA;
@@ -31,7 +35,7 @@ public class BugActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         APPManager.getInstance().addActivity(this);
         setContentView(R.layout.activity_bug);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
@@ -49,6 +53,7 @@ public class BugActivity extends AppCompatActivity {
 
     private void initView() {
         appBarLayout = findViewById(R.id.app_bar);
+        collapsingToolbarLayout=findViewById(R.id.toolbar_layout);
         //textDetial = findViewById(R.id.textDetial);
         fabSend = findViewById(R.id.fab);
         fabSendA=findViewById(R.id.fab_send);
@@ -62,19 +67,23 @@ public class BugActivity extends AppCompatActivity {
             public void onStateChanged(AppBarLayout appBarLayout, State state) {
                 switch (state) {
                     case IDLE:
-
+                        collapsingToolbarLayout.setTitleEnabled(true);
                         break;
                     case EXPANDED:
+                        collapsingToolbarLayout.setTitleEnabled(true);
                         fabSendA.hide();
                         break;
                     case COLLAPSED:
+                        collapsingToolbarLayout.setTitleEnabled(false);
                         fabSendA.show();
                         break;
                 }
             }
         });
 
+
         try {
+            toolbar.setSubtitle(throwable.getMessage());
             //textDetial.setText("");
             //exceptionInfo.printPhoneInfo(textDetial);
             //if (throwable != null) exceptionInfo.printError(textDetial, throwable);
