@@ -1,6 +1,7 @@
 package com.xhh.launcher.custom.app;
 
 import android.app.Activity;
+import android.app.Service;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,17 +10,17 @@ import java.util.List;
  * Created by nameh on 2018/1/17 0017.
  */
 
-public class ActivityManager {
+public class APPManager {
 
     private List<Activity> activities = new LinkedList<>();
-    private static ActivityManager INSTANCE;
+    private static APPManager INSTANCE;
 
-    public ActivityManager() {
+    public APPManager() {
 
     }
 
-    public static ActivityManager getInstance() {
-        if (INSTANCE == null) INSTANCE = new ActivityManager();
+    public static APPManager getInstance() {
+        if (INSTANCE == null) INSTANCE = new APPManager();
         return INSTANCE;
     }
 
