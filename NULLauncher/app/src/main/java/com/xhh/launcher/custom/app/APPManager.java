@@ -12,7 +12,7 @@ import java.util.List;
 
 public class APPManager {
 
-    private List<Activity> activities = new LinkedList<>();
+    private static List<Activity> activities = new LinkedList<>();
     private static APPManager INSTANCE;
 
     public APPManager() {
