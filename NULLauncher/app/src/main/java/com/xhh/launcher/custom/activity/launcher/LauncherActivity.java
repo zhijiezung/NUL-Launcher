@@ -8,6 +8,12 @@ import android.widget.Toast;
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
 
+/**
+ * 启动器主界面
+ * <p>date: 18-1-25</p>
+ *
+ * @author xhh
+ */
 public class LauncherActivity extends AppCompatActivity {
 
     @Override

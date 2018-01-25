@@ -4,6 +4,12 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 
+/**
+ * 获取手机信息
+ * <p>date: 18-1-25</p>
+ *
+ * @author xhh
+ */
 public class PhoneUtil {
     private Context mContext;
 

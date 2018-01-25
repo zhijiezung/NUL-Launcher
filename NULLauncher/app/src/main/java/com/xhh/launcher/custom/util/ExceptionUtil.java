@@ -6,6 +6,12 @@ import android.widget.TextView;
 
 import com.xhh.launcher.custom.R;
 
+/**
+ * 获取异常信息以及手机信息
+ * <p>date: 18-1-25</p>
+ *
+ * @author xhh
+ */
 public class ExceptionUtil {
 
     private Context mContext;
@@ -16,6 +22,13 @@ public class ExceptionUtil {
         this.mPhoneUtil = new PhoneUtil(context);
     }
 
+    /**
+     * 打印手机信息
+     * <p>date: 18-1-25</p>
+     *
+     * @param textView
+     *        被打印的TextView
+     */
     public void printPhoneInfo(TextView textView) {
         textView.append(mContext.getString(R.string.log_message_phone_brand));
         textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getBrand() + "</font>"));
@@ -35,6 +48,15 @@ public class ExceptionUtil {
         textView.append("\n");
     }
 
+    /**
+     * 打印错误信息
+     * <p>date: 18-1-25</p>
+     *
+     * @param textView
+     *        被打印的TextView
+     * @param throwable
+     *        抛出的异常
+     */
     public void printError(TextView textView, Throwable throwable) {
         textView.append(mContext.getString(R.string.log_message_error));
         textView.append(Html.fromHtml("<font color=\"#E51C23\">" + throwable.getMessage() + "</font>"));

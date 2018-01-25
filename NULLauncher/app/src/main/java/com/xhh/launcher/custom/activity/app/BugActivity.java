@@ -18,6 +18,12 @@ import com.xhh.launcher.custom.base.AAppBarStateChangeListener;
 import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 
+/**
+ * 捕获应用崩溃详情
+ * <p>date: 18-1-25</p>
+ *
+ * @author xhh
+ */
 public class BugActivity extends AppCompatActivity {
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
@@ -51,6 +57,11 @@ public class BugActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 初始化控件
+     * <p>date: 18-1-25</p>
+     *
+     */
     private void initView() {
         mAppBarLayout = findViewById(R.id.app_bar);
         mCollapsingToolbarLayout = findViewById(R.id.toolbar_layout);
@@ -59,6 +70,11 @@ public class BugActivity extends AppCompatActivity {
         mFabSendA = findViewById(R.id.fab_send);
     }
 
+    /**
+     * 初始化数据
+     * <p>date: 18-1-25</p>
+     *
+     */
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
 
@@ -84,6 +100,11 @@ public class BugActivity extends AppCompatActivity {
         showError();
     }
 
+    /**
+     * 显示错误信息
+     * <p>date: 18-1-25</p>
+     *
+     */
     private void showError() {
         try {
             mToolbar.setSubtitle(mThrowable.getMessage());
@@ -117,6 +138,11 @@ public class BugActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    /**
+     * 打印额外的错误信息
+     * <p>date: 18-1-25</p>
+     *
+     */
     private void print(String text) {
         AlertDialog.Builder builder = new AlertDialog.Builder(BugActivity.this);
         builder.setTitle(R.string.base_prompt);

@@ -7,6 +7,12 @@ import com.xhh.launcher.custom.handler.CrashHandler;
 
 import java.util.Map;
 
+/**
+ * Application
+ * <p>date: 18-1-25</p>
+ *
+ * @author xhh
+ */
 public class NULApplication extends Application {
     @Override
     public void onCreate() {
