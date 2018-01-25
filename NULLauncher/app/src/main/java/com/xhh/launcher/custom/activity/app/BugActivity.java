@@ -20,28 +20,28 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
 
 public class BugActivity extends AppCompatActivity {
 
-    private CollapsingToolbarLayout collapsingToolbarLayout;
-    private AppBarLayout appBarLayout;
-    private Toolbar toolbar;
-    private AppCompatTextView textDetial;
-    private FloatingActionButton fabSend;
-    private FloatingActionButton fabSendA;
+    private CollapsingToolbarLayout mCollapsingToolbarLayout;
+    private AppBarLayout mAppBarLayout;
+    private Toolbar mToolbar;
+    private AppCompatTextView mTextDetial;
+    private FloatingActionButton mFabSend;
+    private FloatingActionButton mFabSendA;
 
-    private Throwable throwable;
-    private ExceptionUtil exceptionInfo;
+    private Throwable mThrowable;
+    private ExceptionUtil mExceptionInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        APPManager.getInstance().addActivity(this);
+        APPManager.getInstance().addActivity(BugActivity.this);
         setContentView(R.layout.activity_bug);
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
         Intent intent = getIntent();
         if (intent != null) {
             try {
-                throwable = (Throwable) intent.getSerializableExtra(ExtrasUtil.EXTRA_BUG_THROWABLE);
+                mThrowable = (Throwable) intent.getSerializableExtra(ExtrasUtil.EXTRA_BUG_THROWABLE);
             } catch (Exception e) {
                 print(e.getMessage());
             }
@@ -52,51 +52,47 @@ public class BugActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        appBarLayout = findViewById(R.id.app_bar);
-        collapsingToolbarLayout=findViewById(R.id.toolbar_layout);
-        //textDetial = findViewById(R.id.textDetial);
-        fabSend = findViewById(R.id.fab);
-        fabSendA=findViewById(R.id.fab_send);
+        mAppBarLayout = findViewById(R.id.app_bar);
+        mCollapsingToolbarLayout = findViewById(R.id.toolbar_layout);
+        mTextDetial = findViewById(R.id.text_Detial);
+        mFabSend = findViewById(R.id.fab);
+        mFabSendA = findViewById(R.id.fab_send);
     }
 
     private void initData() {
-        exceptionInfo = new ExceptionUtil(this);
+        mExceptionInfo = new ExceptionUtil(BugActivity.this);
 
-        appBarLayout.addOnOffsetChangedListener(new AAppBarStateChangeListener() {
+        mAppBarLayout.addOnOffsetChangedListener(new AAppBarStateChangeListener() {
             @Override
-            public void onStateChanged(AppBarLayout appBarLayout, State state) {
+            public void onAppBarStateChanged(AppBarLayout appBarLayout, State state) {
                 switch (state) {
                     case IDLE:
-                        collapsingToolbarLayout.setTitleEnabled(true);
+                        mCollapsingToolbarLayout.setTitleEnabled(true);
                         break;
                     case EXPANDED:
-                        collapsingToolbarLayout.setTitleEnabled(true);
-                        fabSendA.hide();
+                        mCollapsingToolbarLayout.setTitleEnabled(true);
+                        mFabSendA.hide();
                         break;
                     case COLLAPSED:
-                        collapsingToolbarLayout.setTitleEnabled(false);
-                        fabSendA.show();
+                        mCollapsingToolbarLayout.setTitleEnabled(false);
+                        mFabSendA.show();
                         break;
                 }
             }
         });
 
+        showError();
+    }
 
+    private void showError() {
         try {
-            toolbar.setSubtitle(throwable.getMessage());
-            //textDetial.setText("");
-            //exceptionInfo.printPhoneInfo(textDetial);
-            //if (throwable != null) exceptionInfo.printError(textDetial, throwable);
+            mToolbar.setSubtitle(mThrowable.getMessage());
+            mTextDetial.setText("");
+            mExceptionInfo.printPhoneInfo(mTextDetial);
+            if (mThrowable != null) mExceptionInfo.printError(mTextDetial, mThrowable);
         } catch (Exception e) {
             print(e.getMessage());
         }
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        APPManager.getInstance().exitApp();
-        super.onBackPressed();
     }
 
     @Override
@@ -109,11 +105,23 @@ public class BugActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        APPManager.getInstance().exitApp();
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        APPManager.getInstance().removeActivity(BugActivity.this);
+        super.onDestroy();
+    }
+
     private void print(String text) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("提示");
+        AlertDialog.Builder builder = new AlertDialog.Builder(BugActivity.this);
+        builder.setTitle(R.string.base_prompt);
         builder.setMessage(text);
-        builder.setNegativeButton("返回", null);
+        builder.setNegativeButton(R.string.base_back, null);
         builder.show();
     }
 

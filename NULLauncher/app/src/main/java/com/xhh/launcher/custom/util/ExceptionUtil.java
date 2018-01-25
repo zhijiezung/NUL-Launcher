@@ -4,41 +4,39 @@ import android.content.Context;
 import android.text.Html;
 import android.widget.TextView;
 
-/**
- * Created by nameh on 2018/1/18 0018.
- */
+import com.xhh.launcher.custom.R;
 
 public class ExceptionUtil {
 
-    private Context context;
-    private PhoneUtil phoneInfo;
+    private Context mContext;
+    private PhoneUtil mPhoneUtil;
 
     public ExceptionUtil(Context context) {
-        this.context = context;
-        this.phoneInfo = new PhoneUtil(context);
+        this.mContext = context;
+        this.mPhoneUtil = new PhoneUtil(context);
     }
 
     public void printPhoneInfo(TextView textView) {
-        textView.append("手机品牌:");
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + phoneInfo.getBrand() + "</font>"));
+        textView.append(mContext.getString(R.string.log_message_phone_brand));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getBrand() + "</font>"));
         textView.append("\n");
-        textView.append("手机型号:");
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + phoneInfo.getModel() + "</font>"));
+        textView.append(mContext.getString(R.string.log_message_phone_model));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getModel() + "</font>"));
         textView.append("\n");
-        textView.append("名称:");
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + phoneInfo.getProduct() + "</font>"));
+        textView.append(mContext.getString(R.string.log_message_phone_product));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getProduct() + "</font>"));
         textView.append("\n");
-        textView.append("安卓版本:");
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + phoneInfo.getAndroidVersion() + "</font>"));
+        textView.append(mContext.getString(R.string.log_message_phone_ver));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getAndroidVersion() + "</font>"));
         textView.append("\n");
-        textView.append("软件版本:");
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + phoneInfo.getAppVersion() + "</font>"));
+        textView.append(mContext.getString(R.string.log_message_phone_appver));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getAppVersion() + "</font>"));
 
         textView.append("\n");
     }
 
     public void printError(TextView textView, Throwable throwable) {
-        textView.append("错误信息: ");
+        textView.append(mContext.getString(R.string.log_message_error));
         textView.append(Html.fromHtml("<font color=\"#E51C23\">" + throwable.getMessage() + "</font>"));
         textView.append("\n");
         for (StackTraceElement stackTraceElement : throwable.getStackTrace()) {

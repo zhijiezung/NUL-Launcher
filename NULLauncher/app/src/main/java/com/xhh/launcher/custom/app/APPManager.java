@@ -1,43 +1,43 @@
 package com.xhh.launcher.custom.app;
 
 import android.app.Activity;
-import android.app.Service;
 
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by nameh on 2018/1/17 0017.
- */
-
 public class APPManager {
 
-    private static List<Activity> activities = new LinkedList<>();
+    private static List<Activity> mActivities = new LinkedList<>();
     private static APPManager INSTANCE;
 
-    public APPManager() {
+    private APPManager() {
 
     }
 
-    public static APPManager getInstance() {
+    public static synchronized APPManager getInstance() {
         if (INSTANCE == null) INSTANCE = new APPManager();
         return INSTANCE;
     }
 
     public void addActivity(Activity activity) {
-        this.activities.add(activity);
+        this.mActivities.add(activity);
+    }
+
+    public void removeActivity(Activity activity) {
+        this.mActivities.remove(activity);
     }
 
     public void finishAllActivity() {
-        if (activities != null) {
-            for (Activity activity : activities) {
-                activity.finish();
+        if (mActivities != null) {
+            for (int i = 0; i < mActivities.size(); i++) {
+                if (mActivities.get(i) == null) continue;
+                mActivities.get(i).finish();
             }
-            activities.clear();
+            mActivities.clear();
         }
     }
 
-    public void exitApp(){
+    public void exitApp() {
         finishAllActivity();
         android.os.Process.killProcess(android.os.Process.myPid());
     }

@@ -7,11 +7,7 @@ import com.xhh.launcher.custom.handler.CrashHandler;
 
 import java.util.Map;
 
-/**
- * Created by nameh on 2018/1/17 0017.
- */
-
-public class MyApplication extends Application {
+public class NULApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();

@@ -4,15 +4,11 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 
-/**
- * Created by nameh on 2018/1/18 0018.
- */
-
 public class PhoneUtil {
-    private Context context;//mContext
+    private Context mContext;
 
     public PhoneUtil(Context context) {
-        this.context = context;
+        this.mContext = context;
     }
 
     //手机品牌
@@ -38,9 +34,9 @@ public class PhoneUtil {
     //软件版本
     public String getAppVersion() {
         String result = "null";
-        PackageManager packageManager = context.getPackageManager();
+        PackageManager packageManager = mContext.getPackageManager();
         try {
-            result = packageManager.getPackageInfo(context.getPackageName(), 0).versionName;
+            result = packageManager.getPackageInfo(mContext.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
