@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
+import com.xhh.launcher.custom.base.AActivity;
 
 /**
  * 启动器主界面
@@ -14,12 +15,11 @@ import com.xhh.launcher.custom.app.APPManager;
  *
  * @author xhh
  */
-public class LauncherActivity extends AppCompatActivity {
+public class LauncherActivity extends AActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        APPManager.getInstance().addActivity(this);
         setContentView(R.layout.activity_launcher);
         /*Object obj = null;
         obj.toString();*/
@@ -35,9 +35,4 @@ public class LauncherActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    @Override
-    protected void onDestroy() {
-        APPManager.getInstance().removeActivity(LauncherActivity.this);
-        super.onDestroy();
-    }
 }
