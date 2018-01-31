@@ -21,7 +21,7 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
 
 /**
  * 捕获应用崩溃详情
- * <p>date: 18-1-25</p>
+ * 创建时间: 18-1-25
  *
  * @author xhh
  */
@@ -47,7 +47,7 @@ public class BugActivity extends AActivity {
             try {
                 mThrowable = (Throwable) intent.getSerializableExtra(ExtrasUtil.EXTRA_BUG_THROWABLE);
             } catch (Exception e) {
-                print(e.getMessage());
+                print(Print.DIALOG, 0, e.getMessage(), getString(R.string.base_prompt));
             }
         }
         initView();
@@ -57,8 +57,8 @@ public class BugActivity extends AActivity {
 
     /**
      * 初始化控件
-     * <p>date: 18-1-25</p>
-     *
+     * 创建时间: 18-1-25
+     * <br>初始化Activity的控件
      */
     private void initView() {
         mAppBarLayout = findViewById(R.id.app_bar);
@@ -70,8 +70,8 @@ public class BugActivity extends AActivity {
 
     /**
      * 初始化数据
-     * <p>date: 18-1-25</p>
-     *
+     * 创建时间: 18-1-25
+     * <br>初始化Activity的数据
      */
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
@@ -100,8 +100,8 @@ public class BugActivity extends AActivity {
 
     /**
      * 显示错误信息
-     * <p>date: 18-1-25</p>
-     *
+     * 创建时间: 18-1-25
+     * <br>打印错误的堆栈信息
      */
     private void showError() {
         try {
@@ -110,9 +110,17 @@ public class BugActivity extends AActivity {
             mExceptionInfo.printPhoneInfo(mTextDetial);
             if (mThrowable != null) mExceptionInfo.printError(mTextDetial, mThrowable);
         } catch (Exception e) {
-            print(e.getMessage());
+            print(Print.DIALOG, 0, e.getMessage(), getString(R.string.base_prompt));
         }
     }
+
+    /**
+     * OptionItem选中之后执行的操作
+     * 创建时间: 2018/2/1 0000
+     *
+     * @param item 选中的菜单Item
+     * @return boolean
+     */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -124,23 +132,16 @@ public class BugActivity extends AActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * 拦截返回键
+     * 创建时间: 2018/2/1 0001
+     * <br>按下返回键直接关闭应用
+     */
+
     @Override
     public void onBackPressed() {
         APPManager.getInstance().exitApp();
         super.onBackPressed();
-    }
-
-    /**
-     * 打印额外的错误信息
-     * <p>date: 18-1-25</p>
-     *
-     */
-    private void print(String text) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(BugActivity.this);
-        builder.setTitle(R.string.base_prompt);
-        builder.setMessage(text);
-        builder.setNegativeButton(R.string.base_back, null);
-        builder.show();
     }
 
 }
