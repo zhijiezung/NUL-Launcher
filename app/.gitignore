@@ -1,2 +1,2 @@
-/build
-!/build/outputs
+/build/intermediates
+/build/generated
