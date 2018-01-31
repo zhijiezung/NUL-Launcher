@@ -1,3 +1,4 @@
+![](app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 # NUL-Launcher
 [![Build Status](https://travis-ci.org/xiaohuihuiold/NUL-Launcher.svg?branch=master)](https://travis-ci.org/xiaohuihuiold/NUL-Launcher)
 [![](https://img.shields.io/readthedocs/pip/stable.svg)](https://xiaohuihuiold.github.io/NUL-Launcher/index.html)
