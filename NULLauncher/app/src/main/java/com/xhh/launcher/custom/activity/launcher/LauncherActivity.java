@@ -21,8 +21,8 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         APPManager.getInstance().addActivity(this);
         setContentView(R.layout.activity_launcher);
-        Object obj = null;
-        obj.toString();
+        /*Object obj = null;
+        obj.toString();*/
     }
 
     @Override

@@ -43,7 +43,6 @@ public class BugActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bug);
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-
         Intent intent = getIntent();
         if (intent != null) {
             try {
