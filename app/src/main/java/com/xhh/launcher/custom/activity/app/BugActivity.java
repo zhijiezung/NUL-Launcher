@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
+import com.xhh.launcher.custom.base.AActivity;
 import com.xhh.launcher.custom.base.AAppBarStateChangeListener;
 import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
@@ -24,7 +25,7 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
  *
  * @author xhh
  */
-public class BugActivity extends AppCompatActivity {
+public class BugActivity extends AActivity {
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private AppBarLayout mAppBarLayout;
@@ -39,7 +40,6 @@ public class BugActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        APPManager.getInstance().addActivity(BugActivity.this);
         setContentView(R.layout.activity_bug);
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -129,12 +129,6 @@ public class BugActivity extends AppCompatActivity {
     public void onBackPressed() {
         APPManager.getInstance().exitApp();
         super.onBackPressed();
-    }
-
-    @Override
-    protected void onDestroy() {
-        APPManager.getInstance().removeActivity(BugActivity.this);
-        super.onDestroy();
     }
 
     /**
