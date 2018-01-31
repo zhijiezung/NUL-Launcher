@@ -35,7 +35,7 @@ public abstract class AActivity extends AppCompatActivity {
     /**
      * 重写onCreate方法
      * <p>date: 2018/1/31 0031</p>
-     * 当Activity被创建时把此Activity添加到管理器中
+     * 当Activity被创建时把此Activity添加到管理器
      */
 
     @Override
