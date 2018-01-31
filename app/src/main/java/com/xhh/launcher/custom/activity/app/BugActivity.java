@@ -33,7 +33,6 @@ public class BugActivity extends AActivity {
     private AppCompatTextView mTextDetial;
     private FloatingActionButton mFabSend;
     private FloatingActionButton mFabSendA;
-
     private Throwable mThrowable;
     private ExceptionUtil mExceptionInfo;
 
