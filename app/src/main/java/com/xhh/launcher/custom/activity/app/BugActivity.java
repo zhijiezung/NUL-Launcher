@@ -43,6 +43,7 @@ public class BugActivity extends AActivity {
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         System.out.println("test01");
+        System.out.println("test");
         Intent intent = getIntent();
         if (intent != null) {
             try {
