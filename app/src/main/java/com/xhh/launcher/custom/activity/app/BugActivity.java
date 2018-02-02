@@ -20,20 +20,38 @@ import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 
 /**
- * 捕获应用崩溃详情
- * 创建时间: 18-1-25
+ * <span class="text-title">捕获应用崩溃详情界面</span>
+ * <br/><span class="text-date">创建时间: 18-1-25</span>
  *
  * @author xhh
  */
 public class BugActivity extends AActivity {
 
+    /**
+     * 折叠工具栏控件
+     **/
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
+    /**
+     * 用于显示错误信息的控件
+     **/
     private AppCompatTextView mTextDetial;
+    /**
+     * 发送错误信息的按钮
+     **/
     private FloatingActionButton mFabSend;
+    /**
+     * 发送错误信息的按钮
+     **/
     private FloatingActionButton mFabSendA;
+    /**
+     * 抛出的错误的类
+     **/
     private Throwable mThrowable;
+    /**
+     * 异常处理工具类
+     **/
     private ExceptionUtil mExceptionInfo;
 
     @Override
@@ -56,9 +74,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * 初始化控件
-     * 创建时间: 18-1-25
-     * <br>初始化Activity的控件
+     * <span class="text-title">初始化Activity控件</span>
+     * <br/><span class="text-date">创建时间: 18-1-25</span>
+     * <br/><span class="text-desc">初始化Activity的控件</span>
      */
     private void initView() {
         mAppBarLayout = findViewById(R.id.app_bar);
@@ -69,9 +87,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * 初始化数据
-     * 创建时间: 18-1-25
-     * <br>初始化Activity的数据
+     * <span class="text-title">初始化数据</span>
+     * <br/><span class="text-date">创建时间: 18-1-25</span>
+     * <br/><span class="text-desc">初始化Activity的数据</span>
      */
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
@@ -99,9 +117,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * 显示错误信息
-     * 创建时间: 18-1-25
-     * <br>打印错误的堆栈信息
+     * <span class="text-title">显示错误信息</span>
+     * <br/><span class="text-date">创建时间: 18-1-25</span>
+     * <br/><span class="text-desc">打印错误的堆栈信息</span>
      */
     private void showError() {
         try {
@@ -115,8 +133,8 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * OptionItem选中之后执行的操作
-     * 创建时间: 2018/2/1 0000
+     * <span class="text-title">OptionItem选中之后执行的操作</span>
+     * <br/><span class="text-date">创建时间: 2018/2/1 0000</span>
      *
      * @param item 选中的菜单Item
      * @return boolean
@@ -133,9 +151,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * 拦截返回键
-     * 创建时间: 2018/2/1 0001
-     * <br>按下返回键直接关闭应用
+     * <span class="text-title">拦截返回键</span>
+     * <br/><span class="text-date">创建时间: 2018/2/1 0001</span>
+     * <br/><span class="text-desc">按下返回键直接关闭应用</span>
      */
 
     @Override
