@@ -11,9 +11,9 @@ import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
 
 /**
- * Activity基类
- * <p>date: 2018/1/31 0031</p>
- * 方便管理activity
+ * <span class="text-title">Activity基类</span>
+ * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
+ * <br/><span class="text-desc">方便管理activity</span>
  *
  * @author nameh
  */
@@ -22,20 +22,26 @@ public abstract class AActivity extends AppCompatActivity {
 
     /**
      * 打印类型枚举
-     * TOAST: 弹出Toast提示
-     * SNACKBAR: 弹出Snackbar提示
-     * DIALOOG: 弹出Dialog提示框
      **/
     public enum Print {
+        /**
+         * 弹出Toast提示
+         **/
         TOAST,
+        /**
+         * 弹出Snackbar提示
+         **/
         SNACKBAR,
+        /**
+         * 弹出Dialog提示框
+         **/
         DIALOG
     }
 
     /**
-     * 重写onCreate方法
-     * <p>date: 2018/1/31 0031</p>
-     * 当Activity被创建时把此Activity添加到管理器
+     * <span class="text-title">重写onCreate方法</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
+     * <br/><span class="text-desc">当Activity创建时把此Activity添加到管理器</span>
      */
 
     @Override
@@ -45,9 +51,9 @@ public abstract class AActivity extends AppCompatActivity {
     }
 
     /**
-     * 重写onDestory方法
-     * <p>date: 2018/1/31 0031</p>
-     * 当Activity被删除时把此Activity从管理器中移除
+     * <span class="text-title">重写onDestory方法</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
+     * <br/><span class="text-desc">当Activity被删除时把此Activity从管理器中移除</span>
      */
 
     @Override
@@ -57,13 +63,13 @@ public abstract class AActivity extends AppCompatActivity {
     }
 
     /**
-     * 打印字符串
-     * <p>date: 2018/1/31 0031</p>
-     * 提供打印方法，方便直接调用
+     * <span class="text-title">打印字符串</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
+     * <br/><span class="text-desc">提供打印方法，方便直接调用</span>
      *
-     * @param type    展示的类型(TOAST: 弹出Toast提示,SNACKBAR: 弹出Snackbar提示, DIALOOG: 弹出Dialog提示框)
+     * @param type    展示的类型<br/><span class="text-type">TOAST: 弹出Toast提示<br/>SNACKBAR: 弹出Snackbar提示<br/>DIALOOG: 弹出Dialog提示框</span>
      * @param time    展示时间,当展示类型为DIALOG时无效
-     * @param message 标题以及正文(0:正文,1:标题)
+     * @param message 标题以及正文<br/><span class="text-type">0:正文<br/>1:标题</span>
      */
 
     public void print(Print type, int time, String... message) {
@@ -86,8 +92,8 @@ public abstract class AActivity extends AppCompatActivity {
     }
 
     /**
-     * Toast形式显示信息
-     * <p>date: 2018/1/31 0031</p>
+     * <span class="text-title">Toast形式显示信息</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
      *
      * @param message 要显示的信息
      * @param time    显示的时间
@@ -98,8 +104,8 @@ public abstract class AActivity extends AppCompatActivity {
     }
 
     /**
-     * Snackbar形式显示信息
-     * <p>date: 2018/1/31 0031</p>
+     * <span class="text-title">Snackbar形式显示信息</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
      *
      * @param message 要显示的信息
      * @param time    显示的时间
@@ -110,8 +116,8 @@ public abstract class AActivity extends AppCompatActivity {
     }
 
     /**
-     * Dialog形式显示信息
-     * <p>date: 2018/1/31 0031</p>
+     * <span class="text-title">Dialog形式显示信息</span>
+     * <br/><span class="text-date">创建时间: 2018/1/31 0031</span>
      *
      * @param message 要显示的信息
      * @param title   要显示的标题

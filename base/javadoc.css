@@ -607,6 +607,11 @@ div.contentContainer ul.blockList li.blockList h2{
     font-size:12px;
 }
 
+.text-type {
+    display:inline-block;
+    margin-left:2em;
+}
+
 h3 {
     font-family: 'robot';
     font-weight: 500;
