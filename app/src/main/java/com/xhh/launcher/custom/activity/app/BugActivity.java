@@ -20,8 +20,8 @@ import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 
 /**
- * <span class="text-title">捕获应用崩溃详情界面</span>
- * <br/><span class="text-date">创建时间: 18-1-25</span>
+ * <p>捕获应用崩溃详情界面.</p>
+ * <p>创建时间: 18-1-25</p>
  *
  * @author xhh
  */
@@ -74,9 +74,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * <span class="text-title">初始化Activity控件</span>
-     * <br/><span class="text-date">创建时间: 18-1-25</span>
-     * <br/><span class="text-desc">初始化Activity的控件</span>
+     * <p>初始化Activity控件.</p>
+     * <p>创建时间: 18-1-25</p>
+     * <br/><p>初始化Activity的控件</p>
      */
     private void initView() {
         mAppBarLayout = findViewById(R.id.app_bar);
@@ -87,9 +87,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * <span class="text-title">初始化数据</span>
-     * <br/><span class="text-date">创建时间: 18-1-25</span>
-     * <br/><span class="text-desc">初始化Activity的数据</span>
+     * <p>初始化数据.</p>
+     * <p>创建时间: 18-1-25</p>
+     * <br/><p>初始化Activity的数据</p>
      */
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
@@ -117,9 +117,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * <span class="text-title">显示错误信息</span>
-     * <br/><span class="text-date">创建时间: 18-1-25</span>
-     * <br/><span class="text-desc">打印错误的堆栈信息</span>
+     * <p>显示错误信息.</p>
+     * <p>创建时间: 18-1-25</p>
+     * <br/><p>打印错误的堆栈信息</p>
      */
     private void showError() {
         try {
@@ -133,8 +133,8 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * <span class="text-title">OptionItem选中之后执行的操作</span>
-     * <br/><span class="text-date">创建时间: 2018/2/1 0000</span>
+     * <p>OptionItem选中之后执行的操作.</p>
+     * <br/><p>创建时间: 2018/2/1 0000</p>
      *
      * @param item 选中的菜单Item
      * @return boolean
@@ -151,9 +151,9 @@ public class BugActivity extends AActivity {
     }
 
     /**
-     * <span class="text-title">拦截返回键</span>
-     * <br/><span class="text-date">创建时间: 2018/2/1 0001</span>
-     * <br/><span class="text-desc">按下返回键直接关闭应用</span>
+     * <p>拦截返回键.</span>
+     * <p>创建时间: 2018/2/1 0001</p>
+     * <br/><p>按下返回键直接关闭应用</p>
      */
 
     @Override
