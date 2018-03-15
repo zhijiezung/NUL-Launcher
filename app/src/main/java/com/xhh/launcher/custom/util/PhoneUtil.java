@@ -5,39 +5,73 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 
 /**
- * 获取手机信息
- * <p>date: 18-1-25</p>
+ * <p>获取手机信息.</p>
+ * <p>创建时间: 18-1-25</p>
  *
  * @author xhh
  */
 public class PhoneUtil {
+    /**
+     * 传输的Context
+     */
     private Context mContext;
 
     public PhoneUtil(Context context) {
         this.mContext = context;
     }
 
-    //手机品牌
+    /**
+     * <p>获取手机品牌.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>获取手机品牌.</p>
+     *
+     * @return String 返回手机品牌
+     */
+
     public String getBrand() {
         return Build.BRAND;
     }
 
-    //手机型号
+    /**
+     * <p>获取手机型号.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>获取手机型号.</p>
+     *
+     * @return String 返回手机型号
+     */
     public String getModel() {
         return Build.MODEL;
     }
 
-    //名称
+    /**
+     * <p>获取手机名称.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>获取手机名称.</p>
+     *
+     * @return String 返回手机名称
+     */
     public String getProduct() {
         return Build.PRODUCT;
     }
 
-    //安卓版本
+    /**
+     * <p>获取安卓版本.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>获取安卓版本.</p>
+     *
+     * @return String 返回安卓版本
+     */
     public String getAndroidVersion() {
         return Build.VERSION.RELEASE;
     }
 
-    //软件版本
+    /**
+     * <p>获取软件版本.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>获取软件版本.</p>
+     *
+     * @return String 返回软件版本
+     */
     public String getAppVersion() {
         String result = "null";
         PackageManager packageManager = mContext.getPackageManager();

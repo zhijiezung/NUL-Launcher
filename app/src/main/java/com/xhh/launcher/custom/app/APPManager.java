@@ -6,19 +6,19 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Activity管理器
- * <p>date: 18-1-25</p>
- *
+ * <p>Activity管理器.</p>
+ * <p>创建时间: 18-1-25</p>
+ * <br/><p>Activity管理作用</p>
  * @author xhh
  */
 public class APPManager {
 
-    private static List<Activity> mActivities = new LinkedList<>();
+    private List<Activity> mActivities = new LinkedList<>();
     private static APPManager INSTANCE;
 
     /**
-     * 确保不会被外部实例化
-     * <p>date: 18-1-25</p>
+     * <p>确保不会被外部实例化.</p>
+     * <p>创建时间: 18-1-25</p>
      *
      */
     private APPManager() {
@@ -26,18 +26,20 @@ public class APPManager {
     }
 
     /**
-     * 获取实例
-     * <p>date: 18-1-25</p>
-     *
+     * <p>获取实例.</p>
+     * <p>创建时间: 18-1-25</p>
+     * <br/><p>单例模式</p>
      */
     public static synchronized APPManager getInstance() {
-        if (INSTANCE == null) INSTANCE = new APPManager();
+        if (INSTANCE == null) {
+            INSTANCE = new APPManager();
+        }
         return INSTANCE;
     }
 
     /**
-     * 添加一个activity
-     * <p>date: 18-1-25</p>
+     * <p>添加一个activity.</p>
+     * <p>创建时间: 18-1-25</p>
      *
      */
     public void addActivity(Activity activity) {
@@ -45,8 +47,8 @@ public class APPManager {
     }
 
     /**
-     * 移除一个activity
-     * <p>date: 18-1-25</p>
+     * <p>移除一个activity.</p>
+     * <p>创建时间: 18-1-25</p>
      *
      */
     public void removeActivity(Activity activity) {
@@ -54,14 +56,16 @@ public class APPManager {
     }
 
     /**
-     * 结束所有activity
-     * <p>date: 18-1-25</p>
+     * <p>结束所有activity.</p>
+     * <p>创建时间: 18-1-25</p>
      *
      */
     public void finishAllActivity() {
         if (mActivities != null) {
             for (int i = 0; i < mActivities.size(); i++) {
-                if (mActivities.get(i) == null) continue;
+                if (mActivities.get(i) == null) {
+                    continue;
+                }
                 mActivities.get(i).finish();
             }
             mActivities.clear();
@@ -69,8 +73,8 @@ public class APPManager {
     }
 
     /**
-     * 结束所有activity并且杀死当前进程
-     * <p>date: 18-1-25</p>
+     * <p>结束所有activity并且杀死当前进程.</p>
+     * <p>创建时间: 18-1-25</p>
      *
      */
     public void exitApp() {

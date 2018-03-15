@@ -4,18 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.GridView;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
-import com.xhh.launcher.custom.base.AActivity;
-import com.xhh.launcher.custom.base.AAppBarStateChangeListener;
+import com.xhh.launcher.custom.base.BaseActivity;
+import com.xhh.launcher.custom.base.BaseAppBarStateChangeListener;
 import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 
@@ -25,7 +23,7 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
  *
  * @author xhh
  */
-public class BugActivity extends AActivity {
+public class BugActivity extends BaseActivity {
 
     /**
      * 折叠工具栏控件
@@ -34,7 +32,7 @@ public class BugActivity extends AActivity {
     private AppBarLayout mAppBarLayout;
     private Toolbar mToolbar;
     /**
-     * 用于显示错误信息的控件
+     * 用于显示错误信息的文本
      **/
     private AppCompatTextView mTextDetial;
     /**
@@ -70,7 +68,6 @@ public class BugActivity extends AActivity {
         }
         initView();
         initData();
-
     }
 
     /**
@@ -94,7 +91,7 @@ public class BugActivity extends AActivity {
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
 
-        mAppBarLayout.addOnOffsetChangedListener(new AAppBarStateChangeListener() {
+        mAppBarLayout.addOnOffsetChangedListener(new BaseAppBarStateChangeListener() {
             @Override
             public void onAppBarStateChanged(AppBarLayout appBarLayout, State state) {
                 switch (state) {
@@ -108,6 +105,8 @@ public class BugActivity extends AActivity {
                     case COLLAPSED:
                         mCollapsingToolbarLayout.setTitleEnabled(false);
                         mFabSendA.show();
+                        break;
+                    default:
                         break;
                 }
             }
@@ -126,7 +125,9 @@ public class BugActivity extends AActivity {
             mToolbar.setSubtitle(mThrowable.getMessage());
             mTextDetial.setText("");
             mExceptionInfo.printPhoneInfo(mTextDetial);
-            if (mThrowable != null) mExceptionInfo.printError(mTextDetial, mThrowable);
+            if (mThrowable != null) {
+                mExceptionInfo.printError(mTextDetial, mThrowable);
+            }
         } catch (Exception e) {
             print(Print.DIALOG, 0, e.getMessage(), getString(R.string.base_prompt));
         }
@@ -146,12 +147,14 @@ public class BugActivity extends AActivity {
             case android.R.id.home:
                 APPManager.getInstance().exitApp();
                 break;
+            default:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
 
     /**
-     * <p>拦截返回键.</span>
+     * <p>拦截返回键.</p>
      * <p>创建时间: 2018/2/1 0001</p>
      * <br/><p>按下返回键直接关闭应用</p>
      */

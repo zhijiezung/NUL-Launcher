@@ -7,14 +7,20 @@ import android.widget.TextView;
 import com.xhh.launcher.custom.R;
 
 /**
- * 获取异常信息以及手机信息
- * <p>date: 18-1-25</p>
+ * <p>获取异常信息以及手机信息.</p>
+ * <p>创建时间: 18-1-25</p>
  *
  * @author xhh
  */
 public class ExceptionUtil {
 
+    /**
+     * 传入的Context
+     */
     private Context mContext;
+    /**
+     * 手机工具类
+     */
     private PhoneUtil mPhoneUtil;
 
     public ExceptionUtil(Context context) {
@@ -23,11 +29,10 @@ public class ExceptionUtil {
     }
 
     /**
-     * 打印手机信息
-     * <p>date: 18-1-25</p>
+     * <p>打印手机信息.</p>
+     * <p>创建时间: 18-1-25</p>
      *
-     * @param textView
-     *        被打印的TextView
+     * @param textView 被打印的TextView
      */
     public void printPhoneInfo(TextView textView) {
         textView.append(mContext.getString(R.string.log_message_phone_brand));
@@ -49,13 +54,11 @@ public class ExceptionUtil {
     }
 
     /**
-     * 打印错误信息
-     * <p>date: 18-1-25</p>
+     * <p>打印错误信息.</p>
+     * <p>创建时间: 18-1-25</p>
      *
-     * @param textView
-     *        被打印的TextView
-     * @param throwable
-     *        抛出的异常
+     * @param textView 被打印的TextView
+     * @param throwable 抛出的异常
      */
     public void printError(TextView textView, Throwable throwable) {
         textView.append(mContext.getString(R.string.log_message_error));

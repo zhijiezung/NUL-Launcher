@@ -3,34 +3,41 @@ package com.xhh.launcher.custom.base;
 import android.support.design.widget.AppBarLayout;
 
 /**
- * 重写AppBarLayout状态监听
- * <p>date: 18-1-25</p>
+ * <p>重写AppBarLayout状态监听.</p>
+ * <p>创建时间: 18-1-25</p>
  *
  * @author xhh
  */
-public abstract class AAppBarStateChangeListener implements AppBarLayout.OnOffsetChangedListener {
+public abstract class BaseAppBarStateChangeListener implements AppBarLayout.OnOffsetChangedListener {
 
     /**
-     * 状态
-     * <p>date: 18-1-25</p>
+     * <p>状态.</p>
+     * <p>创建时间: 18-1-25</p>
      * 展开 折叠 中间
      */
     public enum State {
+        /**
+         * 展开
+         */
         EXPANDED,
+        /**
+         * 折叠
+         */
         COLLAPSED,
+        /**
+         * 处于展开与折叠之间
+         */
         IDLE
     }
 
     private State mCurrentState = State.IDLE;
 
     /**
-     * 重写偏移改变
-     * <p>date: 18-1-25</p>
+     * <p>重写偏移改变.</p>
+     * <p>创建时间: 18-1-25</p>
      *
-     * @param appBarLayout
-     *        改变的AppBarLayout控件
-     * @param verticalOffset
-     *        改变的偏移量
+     * @param appBarLayout 改变的AppBarLayout控件
+     * @param verticalOffset 改变的偏移量
      */
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
