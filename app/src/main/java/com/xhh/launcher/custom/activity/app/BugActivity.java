@@ -151,7 +151,11 @@ public class BugActivity extends BaseActivity implements View.OnClickListener {
      */
 
     private void sendError(){
-        print(Print.TOAST, Toast.LENGTH_SHORT,"发送错误信息");
+        Intent intent=new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT,mTextDetial.getText().toString());
+        intent.setType("text/plain");
+        startActivity(intent);
     }
 
     /**
