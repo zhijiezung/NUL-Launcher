@@ -18,14 +18,9 @@ public class ExceptionUtil {
      * 传入的Context
      */
     private Context mContext;
-    /**
-     * 手机工具类
-     */
-    private PhoneUtil mPhoneUtil;
 
     public ExceptionUtil(Context context) {
         this.mContext = context;
-        this.mPhoneUtil = new PhoneUtil(context);
     }
 
     /**
@@ -36,19 +31,19 @@ public class ExceptionUtil {
      */
     public void printPhoneInfo(TextView textView) {
         textView.append(mContext.getString(R.string.log_message_phone_brand));
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getBrand() + "</font>"));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + PhoneUtil.getBrand() + "</font>"));
         textView.append("\n");
         textView.append(mContext.getString(R.string.log_message_phone_model));
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getModel() + "</font>"));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + PhoneUtil.getModel() + "</font>"));
         textView.append("\n");
         textView.append(mContext.getString(R.string.log_message_phone_product));
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getProduct() + "</font>"));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + PhoneUtil.getProduct() + "</font>"));
         textView.append("\n");
         textView.append(mContext.getString(R.string.log_message_phone_ver));
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getAndroidVersion() + "</font>"));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + PhoneUtil.getAndroidVersion() + "</font>"));
         textView.append("\n");
         textView.append(mContext.getString(R.string.log_message_phone_appver));
-        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + mPhoneUtil.getAppVersion() + "</font>"));
+        textView.append(Html.fromHtml("<font color=\"#E51C23\">" + PhoneUtil.getAppVersion(mContext) + "</font>"));
 
         textView.append("\n");
     }

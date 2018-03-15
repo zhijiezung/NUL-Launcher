@@ -1,6 +1,7 @@
 package com.xhh.launcher.custom.app;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.tencent.bugly.crashreport.CrashReport;
 import com.xhh.launcher.custom.handler.CrashHandler;
@@ -14,7 +15,9 @@ import java.util.Map;
  * @author nameh
  */
 public class NULApplication extends Application {
-   
+
+    private static Context context;
+
     /**
      * <p>自定义Application.</p>
      * <p>创建时间: 2018/3/15 0015</p>
@@ -24,9 +27,15 @@ public class NULApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        context=getApplicationContext();
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(getApplicationContext());
 
         CrashReport.initCrashReport(getApplicationContext(), "33d4a58eb9", true);
     }
+
+    public static Context getContext(){
+        return context;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.xhh.launcher.custom.activity.app;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -8,7 +9,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.app.APPManager;
@@ -16,6 +19,7 @@ import com.xhh.launcher.custom.base.BaseActivity;
 import com.xhh.launcher.custom.base.BaseAppBarStateChangeListener;
 import com.xhh.launcher.custom.util.ExceptionUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
+import com.xhh.launcher.custom.util.PermissionUtil;
 
 /**
  * <p>捕获应用崩溃详情界面.</p>
@@ -23,7 +27,7 @@ import com.xhh.launcher.custom.util.ExtrasUtil;
  *
  * @author xhh
  */
-public class BugActivity extends BaseActivity {
+public class BugActivity extends BaseActivity implements View.OnClickListener {
 
     /**
      * 折叠工具栏控件
@@ -51,6 +55,10 @@ public class BugActivity extends BaseActivity {
      * 异常处理工具类
      **/
     private ExceptionUtil mExceptionInfo;
+    /**
+     * 储存权限注册code
+     */
+    private final int REQUEST_CODE_STORAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +99,11 @@ public class BugActivity extends BaseActivity {
     private void initData() {
         mExceptionInfo = new ExceptionUtil(BugActivity.this);
 
+        mFabSend.setOnClickListener(this);
+        mFabSendA.setOnClickListener(this);
+
+        showError();
+
         mAppBarLayout.addOnOffsetChangedListener(new BaseAppBarStateChangeListener() {
             @Override
             public void onAppBarStateChanged(AppBarLayout appBarLayout, State state) {
@@ -111,8 +124,6 @@ public class BugActivity extends BaseActivity {
                 }
             }
         });
-
-        showError();
     }
 
     /**
@@ -130,6 +141,40 @@ public class BugActivity extends BaseActivity {
             }
         } catch (Exception e) {
             print(Print.DIALOG, 0, e.getMessage(), getString(R.string.base_prompt));
+        }
+    }
+
+    /**
+     * <p>发送错误信息.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>发送错误信息并保存</p>
+     */
+
+    private void sendError(){
+        print(Print.TOAST, Toast.LENGTH_SHORT,"发送错误信息");
+    }
+
+    /**
+     * <p>按钮监听.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>按钮监听</p>
+     * @param v 按下的View
+     */
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.fab:
+            case R.id.fab_send:
+                if(requestPermissions(REQUEST_CODE_STORAGE, PermissionUtil.PERMISSION_STORAGE)){
+                    sendError();
+                }else{
+                    print(Print.TOAST,Toast.LENGTH_SHORT,"没有授予权限");
+                }
+                break;
+            default:
+                break;
         }
     }
 

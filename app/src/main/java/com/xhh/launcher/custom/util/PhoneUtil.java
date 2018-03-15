@@ -11,14 +11,6 @@ import android.os.Build;
  * @author xhh
  */
 public class PhoneUtil {
-    /**
-     * 传输的Context
-     */
-    private Context mContext;
-
-    public PhoneUtil(Context context) {
-        this.mContext = context;
-    }
 
     /**
      * <p>获取手机品牌.</p>
@@ -28,7 +20,7 @@ public class PhoneUtil {
      * @return String 返回手机品牌
      */
 
-    public String getBrand() {
+    public static String getBrand() {
         return Build.BRAND;
     }
 
@@ -39,7 +31,7 @@ public class PhoneUtil {
      *
      * @return String 返回手机型号
      */
-    public String getModel() {
+    public static String getModel() {
         return Build.MODEL;
     }
 
@@ -50,7 +42,7 @@ public class PhoneUtil {
      *
      * @return String 返回手机名称
      */
-    public String getProduct() {
+    public static String getProduct() {
         return Build.PRODUCT;
     }
 
@@ -61,7 +53,7 @@ public class PhoneUtil {
      *
      * @return String 返回安卓版本
      */
-    public String getAndroidVersion() {
+    public static String getAndroidVersion() {
         return Build.VERSION.RELEASE;
     }
 
@@ -72,11 +64,11 @@ public class PhoneUtil {
      *
      * @return String 返回软件版本
      */
-    public String getAppVersion() {
+    public static String getAppVersion(Context context) {
         String result = "null";
-        PackageManager packageManager = mContext.getPackageManager();
+        PackageManager packageManager = context.getPackageManager();
         try {
-            result = packageManager.getPackageInfo(mContext.getPackageName(), 0).versionName;
+            result = packageManager.getPackageInfo(context.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
