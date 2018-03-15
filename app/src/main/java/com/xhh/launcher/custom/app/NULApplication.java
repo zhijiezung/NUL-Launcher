@@ -8,12 +8,19 @@ import com.xhh.launcher.custom.handler.CrashHandler;
 import java.util.Map;
 
 /**
- * Application
- * <p>date: 18-1-25</p>
- *
- * @author xhh
+ * <p>自定义Application.</p>
+ * <p>创建时间: 2018/3/15 0015</p>
+ * <br/><p>自定义Application.</p>
+ * @author nameh
  */
 public class NULApplication extends Application {
+   
+    /**
+     * <p>自定义Application.</p>
+     * <p>创建时间: 2018/3/15 0015</p>
+     * <br/><p>初始化应用创建时的数据</p>
+     *
+     */
     @Override
     public void onCreate() {
         super.onCreate();

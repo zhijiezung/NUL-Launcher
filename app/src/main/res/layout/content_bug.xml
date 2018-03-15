@@ -8,7 +8,7 @@
     tools:context="com.xhh.launcher.custom.activity.app.BugActivity"
     tools:showIn="@layout/activity_bug">
 
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -26,6 +26,6 @@
 
         </LinearLayout>
 
-    </HorizontalScrollView>
+    </ScrollView>
 
 </android.support.v4.widget.NestedScrollView>

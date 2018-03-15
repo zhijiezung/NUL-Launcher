@@ -18,7 +18,7 @@ import com.xhh.launcher.custom.app.APPManager;
  * @author nameh
  */
 
-public abstract class AActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * 打印类型枚举
@@ -91,7 +91,9 @@ public abstract class AActivity extends AppCompatActivity {
      */
 
     public void print(Print type, int time, String... message) {
-        if (message[0] == null) return;
+        if (message[0] == null) {
+            return;
+        }
         //运行在UI线程，方便直接调用
         runOnUiThread(() -> {
             switch (type) {
@@ -104,6 +106,8 @@ public abstract class AActivity extends AppCompatActivity {
                 case DIALOG:
                     dialog(message[0], message.length == 2 ? message[1] : null);
                     break;
+                    default:
+                        break;
             }
         });
 
@@ -143,7 +147,9 @@ public abstract class AActivity extends AppCompatActivity {
 
     public void dialog(String message, String title) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        if (title != null) builder.setTitle(title);
+        if (title != null) {
+            builder.setTitle(title);
+        }
         builder.setPositiveButton(getString(R.string.base_back), null);
         builder.setMessage(message);
         builder.show();
