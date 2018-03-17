@@ -1,7 +1,12 @@
 package com.xhh.launcher.custom.activity.launcher;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
@@ -25,8 +30,9 @@ public class LauncherActivity extends BaseActivity {
      * <p>按键按下监听.</p>
      * <p>创建时间: 2018/3/15 0015</p>
      * <br/><p>主要是监听返回键</p>
+     *
      * @param keyCode 按键code
-     * @param event 按下动作
+     * @param event   按下动作
      * @return boolean
      */
 
@@ -34,12 +40,15 @@ public class LauncherActivity extends BaseActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
-                Toast.makeText(LauncherActivity.this, R.string.activity_launcher_toast_keydown_back, Toast.LENGTH_SHORT).show();
                 break;
-                default:
-                    break;
+            default:
+                break;
         }
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(LauncherActivity.this, R.string.activity_launcher_toast_keydown_back, Toast.LENGTH_SHORT).show();
+    }
 }
