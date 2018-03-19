@@ -7,6 +7,7 @@ INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1
 MERGED from [com.android.support:design:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\f1d257ee0053341c55ece4a65a629342\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\7fb653c9b82865f56c0cad852589d1ef\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\552ba7602d49e10b57431f053ddb56d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6ad7311575e8dad7b9e396ff07039dba\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:2:1-11:12
 MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\3214b1dac64c1d25f3e4deca7517d55d\AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\92e05050b76ca682b9c69cbeddf0f24f\AndroidManifest.xml:17:1-22:12
@@ -155,6 +156,8 @@ MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\nameh\.gradle\cac
 MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\7fb653c9b82865f56c0cad852589d1ef\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\552ba7602d49e10b57431f053ddb56d5\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\552ba7602d49e10b57431f053ddb56d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6ad7311575e8dad7b9e396ff07039dba\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.0] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\palette-v7-27.1.0.aar\6ad7311575e8dad7b9e396ff07039dba\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:5:5-7:41
 MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\3214b1dac64c1d25f3e4deca7517d55d\AndroidManifest.xml:5:5-7:41

@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
@@ -127,6 +128,44 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public boolean requestPermissions(int requestCode,String[] permissions){
         return PermissionUtil.request(this,permissions,requestCode);
+    }
+
+    public void setLightStatusBar(boolean isLight){
+        int oldFlags=getWindow().getDecorView().getSystemUiVisibility();
+        int newFlags=oldFlags;
+        if(isLight){
+            newFlags|= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        }else {
+            newFlags&=~(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
+        if(newFlags!=oldFlags){
+            int finalNewFlags = newFlags;
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    getWindow().getDecorView().setSystemUiVisibility(finalNewFlags);
+                }
+            });
+        }
+    }
+
+    public void setLightNavigationBar(boolean isLight){
+        int oldFlags=getWindow().getDecorView().getSystemUiVisibility();
+        int newFlags=oldFlags;
+        if(isLight){
+            newFlags|= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+        }else {
+            newFlags&=~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        }
+        if(newFlags!=oldFlags){
+            int finalNewFlags = newFlags;
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    getWindow().getDecorView().setSystemUiVisibility(finalNewFlags);
+                }
+            });
+        }
     }
 
     /**

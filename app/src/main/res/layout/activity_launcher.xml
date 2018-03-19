@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context="com.xhh.launcher.custom.activity.launcher.LauncherActivity">
 
+    <CheckBox
+        android:id="@+id/check_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/check_nav"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <CheckBox
+        android:id="@+id/check_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </android.support.constraint.ConstraintLayout>
