@@ -51,6 +51,8 @@
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <service android:name=".service.WallpaperColorService"/>
+
     </application>
 
 </manifest>

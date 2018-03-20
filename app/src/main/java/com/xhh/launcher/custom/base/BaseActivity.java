@@ -130,32 +130,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         return PermissionUtil.request(this,permissions,requestCode);
     }
 
-    public void setLightStatusBar(boolean isLight){
+    public void setLightStatusNavigationBar(boolean isLight,int flag){
         int oldFlags=getWindow().getDecorView().getSystemUiVisibility();
         int newFlags=oldFlags;
         if(isLight){
-            newFlags|= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            newFlags|= flag;
         }else {
-            newFlags&=~(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
-        if(newFlags!=oldFlags){
-            int finalNewFlags = newFlags;
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    getWindow().getDecorView().setSystemUiVisibility(finalNewFlags);
-                }
-            });
-        }
-    }
-
-    public void setLightNavigationBar(boolean isLight){
-        int oldFlags=getWindow().getDecorView().getSystemUiVisibility();
-        int newFlags=oldFlags;
-        if(isLight){
-            newFlags|= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-        }else {
-            newFlags&=~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+            newFlags&=~(flag);
         }
         if(newFlags!=oldFlags){
             int finalNewFlags = newFlags;

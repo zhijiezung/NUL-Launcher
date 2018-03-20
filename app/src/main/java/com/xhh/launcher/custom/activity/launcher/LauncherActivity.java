@@ -1,8 +1,13 @@
 package com.xhh.launcher.custom.activity.launcher;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.graphics.Palette;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -14,6 +19,9 @@ import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.base.BaseActivity;
+import com.xhh.launcher.custom.data.WallpaperPalette;
+import com.xhh.launcher.custom.receiver.WallpaperReceiver;
+import com.xhh.launcher.custom.service.WallpaperColorService;
 
 /**
  * <p>启动器主界面.</p>
@@ -23,23 +31,28 @@ import com.xhh.launcher.custom.base.BaseActivity;
  */
 public class LauncherActivity extends BaseActivity {
 
+    private WallpaperReceiver mWallpaperReceiver;
+    private PaletteReceiver mPaletteReceiver;
+
+    public static final String SERVICE_RECEIVER_WALLPAPER_PALETTE = "com.xhh.launcher.custom.activity.launcher.receiver.palette";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
-        ((CheckBox) findViewById(R.id.check_status)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                setLightStatusBar(isChecked);
-            }
-        });
-        ((CheckBox) findViewById(R.id.check_nav)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                setLightNavigationBar(isChecked);
-            }
-        });
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(Intent.ACTION_WALLPAPER_CHANGED);
+        mWallpaperReceiver = new WallpaperReceiver();
+        registerReceiver(mWallpaperReceiver, intentFilter);
+
+        IntentFilter intentFilter1 = new IntentFilter();
+        intentFilter.addAction(SERVICE_RECEIVER_WALLPAPER_PALETTE);
+        mPaletteReceiver = new PaletteReceiver();
+        registerReceiver(mPaletteReceiver, intentFilter1);
+
+        Intent ser = new Intent(this, WallpaperColorService.class);
+        startService(ser);
     }
 
     /**
@@ -64,7 +77,34 @@ public class LauncherActivity extends BaseActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        Intent ser = new Intent(this, WallpaperColorService.class);
+        startService(ser);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mWallpaperReceiver != null) {
+            unregisterReceiver(mWallpaperReceiver);
+        }
+        if (mPaletteReceiver != null) {
+            unregisterReceiver(mPaletteReceiver);
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         Toast.makeText(LauncherActivity.this, R.string.activity_launcher_toast_keydown_back, Toast.LENGTH_SHORT).show();
     }
+
+    class PaletteReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            WallpaperPalette wallpaperPalette = (WallpaperPalette) intent.getSerializableExtra("palette");
+            print(Print.TOAST, Toast.LENGTH_LONG, "颜色:" + wallpaperPalette.getPaletteStatus());
+        }
+    }
+
 }
