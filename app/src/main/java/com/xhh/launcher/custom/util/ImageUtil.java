@@ -37,7 +37,7 @@ public class ImageUtil {
      * @return Palette 返回Palette对象
      */
      
-    public static Palette getImagePalette(Drawable drawable) {
+    public static synchronized Palette getImagePalette(Drawable drawable) {
         if (drawable == null) {
             return null;
         }
@@ -56,7 +56,7 @@ public class ImageUtil {
      * @return Palette 返回Palette对象
      */
 
-    public static Palette getImagePalette(Drawable drawable, int left, int top, int right, int bottom) {
+    public static synchronized Palette getImagePalette(Drawable drawable, int left, int top, int right, int bottom) {
         if (drawable == null) {
             return null;
         }
@@ -71,7 +71,7 @@ public class ImageUtil {
      * @return Palette 返回Palette对象
      */
 
-    public static Palette getImagePalette(Bitmap bitmap) {
+    public static synchronized Palette getImagePalette(Bitmap bitmap) {
         if (bitmap == null) {
             return null;
         }
@@ -89,7 +89,7 @@ public class ImageUtil {
      * @return Palette 返回Palette对象
      */
 
-    public static Palette getImagePalette(Bitmap bitmap, int left, int top, int right, int bottom) {
+    public static synchronized Palette getImagePalette(Bitmap bitmap, int left, int top, int right, int bottom) {
         if (bitmap == null) {
             return null;
         }

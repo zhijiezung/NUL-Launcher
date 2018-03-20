@@ -73,12 +73,13 @@ public abstract class BaseActivity extends AppCompatActivity {
      * <p>权限注册回调.</p>
      * <p>创建时间: 2018/3/15 0015</p>
      * <br/><p>权限注册回调.</p>
-     * @param requestCode 返回code
-     * @param permissions 注册的权限
+     *
+     * @param requestCode  返回code
+     * @param permissions  注册的权限
      * @param grantResults 授权值
-     * @return 
+     * @return
      */
-     
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -89,12 +90,13 @@ public abstract class BaseActivity extends AppCompatActivity {
      * <p>权限注册回调.</p>
      * <p>创建时间: 2018/3/15 0015</p>
      * <br/><p>权限注册回调</p>
+     *
      * @param requestCode 注册code
-     * @param isGranted  是否授权成功
+     * @param isGranted   是否授权成功
      */
 
-    protected void onPermissions(int requestCode,boolean isGranted){
-        if(!isGranted){
+    protected void onPermissions(int requestCode, boolean isGranted) {
+        if (!isGranted) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(getString(R.string.activity_base_dialog_permission_message));
             builder.setPositiveButton(getString(R.string.activity_base_dialog_permission_manual), new DialogInterface.OnClickListener() {
@@ -112,8 +114,8 @@ public abstract class BaseActivity extends AppCompatActivity {
             });
             builder.setNegativeButton(getString(R.string.base_cancel), null);
             builder.show();
-        }else{
-            print(Print.TOAST,Toast.LENGTH_LONG,getString(R.string.activity_base_toast_repeat_operation));
+        } else {
+            print(Print.TOAST, Toast.LENGTH_LONG, getString(R.string.activity_base_toast_repeat_operation));
         }
     }
 
@@ -121,24 +123,39 @@ public abstract class BaseActivity extends AppCompatActivity {
      * <p>注册权限.</p>
      * <p>创建时间: 2018/3/15 0015</p>
      * <br/><p>注册权限</p>
+     *
      * @param requestCode 注册code
      * @param permissions 需要注册的权限
      * @return boolean true为已经授权
      */
 
-    public boolean requestPermissions(int requestCode,String[] permissions){
-        return PermissionUtil.request(this,permissions,requestCode);
+    public boolean requestPermissions(int requestCode, String[] permissions) {
+        return PermissionUtil.request(this, permissions, requestCode);
     }
 
-    public void setLightStatusNavigationBar(boolean isLight,int flag){
-        int oldFlags=getWindow().getDecorView().getSystemUiVisibility();
-        int newFlags=oldFlags;
-        if(isLight){
-            newFlags|= flag;
-        }else {
-            newFlags&=~(flag);
+    /**
+     * <p>设置状态栏导航栏图标亮色.</p>
+     * <p>创建时间: 2018/3/20 0020</p>
+     * <br/><p>设置状态栏导航栏图标亮色</p>
+     * <br><p>参考Lawnchair的ch.deletescape.lawnchair.Launcher类的
+     *        <a href="https://github.com/LawnchairLauncher/Lawnchair/blob/beta/app/src/main/java/ch/deletescape/lawnchair/Launcher.java#L499" target="blank">
+     *           activateLightSystemBars
+     *        </a>
+     *        方法修改的效果
+     *      </p>
+     *
+     * @param isLight true为亮色,false为暗色
+     */
+
+    public void setLightStatusNavigationBar(boolean isLight, int flag) {
+        int oldFlags = getWindow().getDecorView().getSystemUiVisibility();
+        int newFlags = oldFlags;
+        if (!isLight) {
+            newFlags |= flag;
+        } else {
+            newFlags &= ~(flag);
         }
-        if(newFlags!=oldFlags){
+        if (newFlags != oldFlags) {
             int finalNewFlags = newFlags;
             runOnUiThread(new Runnable() {
                 @Override
@@ -193,8 +210,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 case DIALOG:
                     dialog(message[0], message.length == 2 ? message[1] : null);
                     break;
-                    default:
-                        break;
+                default:
+                    break;
             }
         });
 

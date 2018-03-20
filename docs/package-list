@@ -2,5 +2,8 @@ com.xhh.launcher.custom.activity.app
 com.xhh.launcher.custom.activity.launcher
 com.xhh.launcher.custom.app
 com.xhh.launcher.custom.base
+com.xhh.launcher.custom.data
 com.xhh.launcher.custom.handler
+com.xhh.launcher.custom.receiver
+com.xhh.launcher.custom.service
 com.xhh.launcher.custom.util

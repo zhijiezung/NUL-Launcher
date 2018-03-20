@@ -2,9 +2,11 @@ package com.xhh.launcher.custom.service;
 
 import android.app.IntentService;
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.support.v7.graphics.Palette;
@@ -12,6 +14,7 @@ import android.util.Log;
 
 import com.xhh.launcher.custom.activity.launcher.LauncherActivity;
 import com.xhh.launcher.custom.data.WallpaperPalette;
+import com.xhh.launcher.custom.util.ColorUtil;
 import com.xhh.launcher.custom.util.ImageUtil;
 import com.xhh.launcher.custom.util.ScreenUtil;
 
@@ -31,8 +34,7 @@ public class WallpaperColorService extends IntentService {
     /**
      * <p>执行操作.</p>
      * <p>创建时间: 2018/3/20 0020</p>
-     * <br/><p>执行操作</p>
-     *
+     * <br/><p>获取壁纸并截取状态栏的导航栏部分，再获取状态栏导航栏亮色或者暗色并通过广播传回{@link com.xhh.launcher.custom.activity.launcher.LauncherActivity.PaletteReceiver#onReceive(Context, Intent)}</p>
      */
 
     @Override
@@ -57,18 +59,11 @@ public class WallpaperColorService extends IntentService {
             WallpaperPalette wallpaperPalette=new WallpaperPalette();
 
             if(paletteStatus!=null){
-                Palette.Swatch swatch=paletteStatus.getVibrantSwatch();
-                if(swatch!=null){
-                    Log.e("PALETTE SWATCH",paletteStatus.toString());
-                    wallpaperPalette.setPaletteStatus(swatch.getTitleTextColor());
-                }
+                wallpaperPalette.setStatusLight(ColorUtil.isShouldLight(paletteStatus));
             }
 
             if(paletteNavigation!=null){
-                Palette.Swatch swatch=paletteNavigation.getVibrantSwatch();
-                if(swatch!=null){
-                    wallpaperPalette.setPaletteNavigation(swatch.getTitleTextColor());
-                }
+                wallpaperPalette.setNavigationLight(ColorUtil.isShouldLight(paletteNavigation));
             }
 
             Intent intentPalette=new Intent(LauncherActivity.SERVICE_RECEIVER_WALLPAPER_PALETTE);

@@ -13,22 +13,22 @@ import java.io.Serializable;
 
 public class WallpaperPalette implements Serializable{
 
-    private int paletteStatus;
-    private int paletteNavigation;
+   private boolean isStatusLight;
+   private boolean isNavigationLight;
 
-    public int getPaletteStatus() {
-        return paletteStatus;
+    public boolean isStatusLight() {
+        return isStatusLight;
     }
 
-    public void setPaletteStatus(int paletteStatus) {
-        this.paletteStatus = paletteStatus;
+    public void setStatusLight(boolean statusLight) {
+        isStatusLight = statusLight;
     }
 
-    public int getPaletteNavigation() {
-        return paletteNavigation;
+    public boolean isNavigationLight() {
+        return isNavigationLight;
     }
 
-    public void setPaletteNavigation(int paletteNavigation) {
-        this.paletteNavigation = paletteNavigation;
+    public void setNavigationLight(boolean navigationLight) {
+        isNavigationLight = navigationLight;
     }
 }
