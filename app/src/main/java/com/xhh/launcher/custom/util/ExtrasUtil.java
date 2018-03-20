@@ -11,4 +11,9 @@ public class ExtrasUtil {
      * Activity传输Bug的key
      */
     public static final String EXTRA_BUG_THROWABLE="extra_bug_throwable";
+
+    /**
+     * Service传递Palette的key
+     */
+    public static final String EXTRA_SERVICE_PALETTE="extra_service_palette";
 }

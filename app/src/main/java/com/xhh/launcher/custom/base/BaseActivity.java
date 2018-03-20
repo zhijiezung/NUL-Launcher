@@ -112,7 +112,12 @@ public abstract class BaseActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            builder.setNegativeButton(getString(R.string.base_cancel), null);
+            builder.setNegativeButton(getString(R.string.base_cancel), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
             builder.show();
         } else {
             print(Print.TOAST, Toast.LENGTH_LONG, getString(R.string.activity_base_toast_repeat_operation));

@@ -15,6 +15,7 @@ import android.util.Log;
 import com.xhh.launcher.custom.activity.launcher.LauncherActivity;
 import com.xhh.launcher.custom.data.WallpaperPalette;
 import com.xhh.launcher.custom.util.ColorUtil;
+import com.xhh.launcher.custom.util.ExtrasUtil;
 import com.xhh.launcher.custom.util.ImageUtil;
 import com.xhh.launcher.custom.util.ScreenUtil;
 
@@ -67,7 +68,7 @@ public class WallpaperColorService extends IntentService {
             }
 
             Intent intentPalette=new Intent(LauncherActivity.SERVICE_RECEIVER_WALLPAPER_PALETTE);
-            intentPalette.putExtra("palette",wallpaperPalette);
+            intentPalette.putExtra(ExtrasUtil.EXTRA_SERVICE_PALETTE,wallpaperPalette);
             sendBroadcast(intentPalette);
         }
     }
