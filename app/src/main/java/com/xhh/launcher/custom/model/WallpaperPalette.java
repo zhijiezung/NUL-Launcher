@@ -1,6 +1,4 @@
-package com.xhh.launcher.custom.data;
-
-import android.support.v7.graphics.Palette;
+package com.xhh.launcher.custom.model;
 
 import java.io.Serializable;
 

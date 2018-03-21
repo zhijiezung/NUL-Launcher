@@ -6,14 +6,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.support.v7.graphics.Palette;
-import android.util.Log;
 
 import com.xhh.launcher.custom.activity.launcher.LauncherActivity;
-import com.xhh.launcher.custom.data.WallpaperPalette;
+import com.xhh.launcher.custom.model.WallpaperPalette;
 import com.xhh.launcher.custom.util.ColorUtil;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 import com.xhh.launcher.custom.util.ImageUtil;

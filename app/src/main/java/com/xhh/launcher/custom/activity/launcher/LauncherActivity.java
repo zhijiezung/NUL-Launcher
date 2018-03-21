@@ -1,31 +1,32 @@
 package com.xhh.launcher.custom.activity.launcher;
 
+import android.app.AlertDialog;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProviderInfo;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.graphics.Palette;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
+import com.xhh.launcher.custom.adapter.ListViewWidgetInfoAdapter;
 import com.xhh.launcher.custom.base.BaseActivity;
-import com.xhh.launcher.custom.data.WallpaperPalette;
+import com.xhh.launcher.custom.model.AppWidgetInfo;
+import com.xhh.launcher.custom.model.WallpaperPalette;
 import com.xhh.launcher.custom.receiver.WallpaperReceiver;
 import com.xhh.launcher.custom.service.WallpaperColorService;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 import com.xhh.launcher.custom.util.PermissionUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>启动器主界面.</p>
@@ -80,6 +81,28 @@ public class LauncherActivity extends BaseActivity {
         //先获取一次颜色
         Intent ser = new Intent(this, WallpaperColorService.class);
         startService(ser);
+
+        List<AppWidgetProviderInfo> widgets = AppWidgetManager.getInstance(this).getInstalledProviders();
+        ArrayList<AppWidgetInfo> appWidgetInfos=new ArrayList<>();
+        for(AppWidgetProviderInfo widget:widgets){
+            AppWidgetInfo appWidgetInfo=new AppWidgetInfo();
+            appWidgetInfo.setName(widget.loadLabel(getPackageManager()));
+            try {
+                appWidgetInfo.setIcon(widget.loadPreviewImage(this, DisplayMetrics.DENSITY_LOW));
+            }catch (Exception e){}
+            appWidgetInfos.add(appWidgetInfo);
+        }
+        findViewById(R.id.launcher_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ListView listView=new ListView(LauncherActivity.this);
+                listView.setAdapter(new ListViewWidgetInfoAdapter(LauncherActivity.this,appWidgetInfos));
+                AlertDialog.Builder builder=new AlertDialog.Builder(LauncherActivity.this);
+                builder.setTitle("小部件");
+                builder.setView(listView);
+                builder.show();
+            }
+        });
     }
 
     @Override
