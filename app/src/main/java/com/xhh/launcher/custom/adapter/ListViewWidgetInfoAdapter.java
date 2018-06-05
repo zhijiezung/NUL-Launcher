@@ -1,5 +1,6 @@
 package com.xhh.launcher.custom.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +13,18 @@ import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.model.AppWidgetInfo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Created by nameh on 2018/3/21 0021.
+ *
+ * @author nameh
+ * @date 2018/3/21 0021
  */
 
 public class ListViewWidgetInfoAdapter extends BaseAdapter {
 
     private Context context;
-    private ArrayList<AppWidgetInfo> appWidgetInfos=new ArrayList<>();
+    private List<AppWidgetInfo> appWidgetInfos;
 
     public ListViewWidgetInfoAdapter(Context context,ArrayList<AppWidgetInfo> appWidgetInfos){
         this.context=context;
@@ -44,6 +48,7 @@ public class ListViewWidgetInfoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        @SuppressLint({"ViewHolder", "InflateParams"})
         View view= LayoutInflater.from(context).inflate(R.layout.listview_widgetinfo,null);
         ImageView icon=view.findViewById(R.id.widget_icon);
         TextView name=view.findViewById(R.id.widget_name);

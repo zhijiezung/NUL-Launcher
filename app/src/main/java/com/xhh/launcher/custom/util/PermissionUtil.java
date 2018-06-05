@@ -2,7 +2,6 @@ package com.xhh.launcher.custom.util;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -53,7 +52,7 @@ public class PermissionUtil {
      * @param code 返回的code
      */
 
-    public static void requestPermission(Activity activity, String[] permissions,int code){
+    private static void requestPermission(Activity activity, String[] permissions, int code){
         ActivityCompat.requestPermissions(activity,permissions,code);
     }
 
@@ -65,7 +64,7 @@ public class PermissionUtil {
      * @return boolean true为全部授权
      */
 
-    public static boolean checkPermissions(Activity activity,String[] permissions){
+    private static boolean checkPermissions(Activity activity, String[] permissions){
         for(String permission:permissions){
             if(!checkPermission(activity,permission)){
                 return false;
@@ -99,7 +98,7 @@ public class PermissionUtil {
      * @return boolean true为授权
      */
 
-    public static boolean checkPermission(Activity activity,String permission){
+    private static boolean checkPermission(Activity activity, String permission){
         return ContextCompat.checkSelfPermission(activity,permission)== PackageManager.PERMISSION_GRANTED;
     }
 

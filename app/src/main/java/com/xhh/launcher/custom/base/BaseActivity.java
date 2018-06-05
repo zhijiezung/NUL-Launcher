@@ -1,6 +1,5 @@
 package com.xhh.launcher.custom.base;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,11 +9,10 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
-import com.xhh.launcher.custom.app.APPManager;
+import com.xhh.launcher.custom.app.AppManager;
 import com.xhh.launcher.custom.util.PermissionUtil;
 
 /**
@@ -54,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        APPManager.getInstance().addActivity(this);
+        AppManager.getInstance().addActivity(this);
     }
 
     /**
@@ -65,7 +63,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        APPManager.getInstance().removeActivity(this);
+        AppManager.getInstance().removeActivity(this);
         super.onDestroy();
     }
 
@@ -77,7 +75,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param requestCode  返回code
      * @param permissions  注册的权限
      * @param grantResults 授权值
-     * @return
      */
 
     @Override
@@ -99,25 +96,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (!isGranted) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(getString(R.string.activity_base_dialog_permission_message));
-            builder.setPositiveButton(getString(R.string.activity_base_dialog_permission_manual), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent();
-                    intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                    intent.addCategory(Intent.CATEGORY_DEFAULT);
-                    intent.setData(Uri.parse("package:" + getPackageName()));
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-                    startActivity(intent);
-                }
+            builder.setPositiveButton(getString(R.string.activity_base_dialog_permission_manual), (dialog, which) -> {
+                Intent intent = new Intent();
+                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                intent.setData(Uri.parse("package:" + getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+                startActivity(intent);
             });
-            builder.setNegativeButton(getString(R.string.base_cancel), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            });
+            builder.setNegativeButton(getString(R.string.base_cancel), (dialog, which) -> finish());
             builder.show();
         } else {
             print(Print.TOAST, Toast.LENGTH_LONG, getString(R.string.activity_base_toast_repeat_operation));
@@ -162,12 +151,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         if (newFlags != oldFlags) {
             int finalNewFlags = newFlags;
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    getWindow().getDecorView().setSystemUiVisibility(finalNewFlags);
-                }
-            });
+            runOnUiThread(() -> getWindow().getDecorView().setSystemUiVisibility(finalNewFlags));
         }
     }
 

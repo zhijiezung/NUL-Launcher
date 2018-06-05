@@ -1,12 +1,13 @@
 package com.xhh.launcher.custom.handler;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
 import com.xhh.launcher.custom.R;
 import com.xhh.launcher.custom.activity.app.BugActivity;
-import com.xhh.launcher.custom.app.APPManager;
+import com.xhh.launcher.custom.app.AppManager;
 import com.xhh.launcher.custom.util.ExtrasUtil;
 
 import java.lang.Thread.UncaughtExceptionHandler;
@@ -22,6 +23,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
     /**
      * 单例
      */
+    @SuppressLint("StaticFieldLeak")
     private static CrashHandler INSTANCE;
     /**
      * ApplicationContext
@@ -78,6 +80,6 @@ public class CrashHandler implements UncaughtExceptionHandler {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(ExtrasUtil.EXTRA_BUG_THROWABLE, throwable);
         mContext.startActivity(intent);
-        APPManager.getInstance().exitApp();
+        AppManager.getInstance().exitApp();
     }
 }

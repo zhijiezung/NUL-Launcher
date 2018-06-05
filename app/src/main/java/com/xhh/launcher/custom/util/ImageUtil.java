@@ -93,11 +93,10 @@ public class ImageUtil {
         if (bitmap == null) {
             return null;
         }
-        Palette palette = Palette.from(bitmap)
+        return Palette.from(bitmap)
                 .setRegion(left, top, right, bottom)
                 .clearFilters()
                 .generate();
-        return palette;
     }
 
 }

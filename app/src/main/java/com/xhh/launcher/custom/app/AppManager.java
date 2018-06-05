@@ -11,17 +11,17 @@ import java.util.List;
  * <br/><p>Activity管理作用</p>
  * @author xhh
  */
-public class APPManager {
+public class AppManager {
 
     private List<Activity> mActivities = new LinkedList<>();
-    private static APPManager INSTANCE;
+    private static AppManager INSTANCE;
 
     /**
      * <p>确保不会被外部实例化.</p>
      * <p>创建时间: 18-1-25</p>
      *
      */
-    private APPManager() {
+    private AppManager() {
 
     }
 
@@ -30,9 +30,9 @@ public class APPManager {
      * <p>创建时间: 18-1-25</p>
      * <br/><p>单例模式</p>
      */
-    public static synchronized APPManager getInstance() {
+    public static synchronized AppManager getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new APPManager();
+            INSTANCE = new AppManager();
         }
         return INSTANCE;
     }
@@ -60,7 +60,7 @@ public class APPManager {
      * <p>创建时间: 18-1-25</p>
      *
      */
-    public void finishAllActivity() {
+    private void finishAllActivity() {
         if (mActivities != null) {
             for (int i = 0; i < mActivities.size(); i++) {
                 if (mActivities.get(i) == null) {

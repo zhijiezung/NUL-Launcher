@@ -7,9 +7,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListView;
@@ -53,22 +53,22 @@ public class LauncherActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
-        if(requestPermissions(REQUEST_CODE_STORAGE, PermissionUtil.PERMISSION_STORAGE)){
+        if (requestPermissions(REQUEST_CODE_STORAGE, PermissionUtil.PERMISSION_STORAGE)) {
             init();
-        }else{
-            print(Print.TOAST,Toast.LENGTH_SHORT,"没有授予权限");
+        } else {
+            print(Print.TOAST, Toast.LENGTH_SHORT, "没有授予权限");
         }
     }
-    
+
     /**
      * <p>开始初始化.</p>
      * <p>创建时间: 2018/3/20 0020</p>
      * <br/><p>开始初始化</p>
      */
-    private void init(){
+    private void init() {
         //壁纸改变广播
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(Intent.ACTION_WALLPAPER_CHANGED);
+        intentFilter.addAction("android.intent.action.WALLPAPER_CHANGED");
         mWallpaperReceiver = new WallpaperReceiver();
         registerReceiver(mWallpaperReceiver, intentFilter);
 
@@ -83,32 +83,31 @@ public class LauncherActivity extends BaseActivity {
         startService(ser);
 
         List<AppWidgetProviderInfo> widgets = AppWidgetManager.getInstance(this).getInstalledProviders();
-        ArrayList<AppWidgetInfo> appWidgetInfos=new ArrayList<>();
-        for(AppWidgetProviderInfo widget:widgets){
-            AppWidgetInfo appWidgetInfo=new AppWidgetInfo();
+        ArrayList<AppWidgetInfo> appWidgetInfos = new ArrayList<>();
+        for (AppWidgetProviderInfo widget : widgets) {
+            AppWidgetInfo appWidgetInfo = new AppWidgetInfo();
             appWidgetInfo.setName(widget.loadLabel(getPackageManager()));
             try {
                 appWidgetInfo.setIcon(widget.loadPreviewImage(this, DisplayMetrics.DENSITY_LOW));
-            }catch (Exception e){}
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             appWidgetInfos.add(appWidgetInfo);
         }
-        findViewById(R.id.launcher_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ListView listView=new ListView(LauncherActivity.this);
-                listView.setAdapter(new ListViewWidgetInfoAdapter(LauncherActivity.this,appWidgetInfos));
-                AlertDialog.Builder builder=new AlertDialog.Builder(LauncherActivity.this);
-                builder.setTitle("小部件");
-                builder.setView(listView);
-                builder.show();
-            }
+        findViewById(R.id.launcher_btn).setOnClickListener(v -> {
+            ListView listView = new ListView(LauncherActivity.this);
+            listView.setAdapter(new ListViewWidgetInfoAdapter(LauncherActivity.this, appWidgetInfos));
+            AlertDialog.Builder builder = new AlertDialog.Builder(LauncherActivity.this);
+            builder.setTitle("小部件");
+            builder.setView(listView);
+            builder.show();
         });
     }
 
     @Override
     protected void onPermissions(int requestCode, boolean isGranted) {
         super.onPermissions(requestCode, isGranted);
-        if(isGranted&&requestCode==REQUEST_CODE_STORAGE){
+        if (isGranted && requestCode == REQUEST_CODE_STORAGE) {
             init();
         }
     }
@@ -167,14 +166,19 @@ public class LauncherActivity extends BaseActivity {
      * <p>Paltte广播接收器.</p>
      * <p>创建时间: 2018/3/20 0020</p>
      * <br/><p>Paltte广播接收器，接收来自{@link WallpaperColorService#onHandleIntent(Intent)}的广播</p>
+     *
      * @author nameh
      */
     class PaletteReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             WallpaperPalette wallpaperPalette = (WallpaperPalette) intent.getSerializableExtra(ExtrasUtil.EXTRA_SERVICE_PALETTE);
-            setLightStatusNavigationBar(wallpaperPalette.isStatusLight(),View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-            setLightStatusNavigationBar(wallpaperPalette.isNavigationLight(),View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+            setLightStatusNavigationBar(wallpaperPalette.isStatusLight(), View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                setLightStatusNavigationBar(wallpaperPalette
+                        .isNavigationLight(), View
+                        .SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+            }
         }
     }
 

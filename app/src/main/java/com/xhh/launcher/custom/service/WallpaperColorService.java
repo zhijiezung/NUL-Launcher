@@ -39,7 +39,7 @@ public class WallpaperColorService extends IntentService {
     protected void onHandleIntent(@Nullable Intent intent) {
         WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
         PackageManager packageManager = getApplicationContext().getPackageManager();
-        Bitmap bitmap = null;
+        Bitmap bitmap;
         if (wallpaperManager.getWallpaperInfo() != null) {
             try {
                 bitmap = ImageUtil.drawable2Bitmap(wallpaperManager.getWallpaperInfo().loadThumbnail(packageManager));
@@ -56,13 +56,9 @@ public class WallpaperColorService extends IntentService {
 
             WallpaperPalette wallpaperPalette=new WallpaperPalette();
 
-            if(paletteStatus!=null){
-                wallpaperPalette.setStatusLight(ColorUtil.isShouldLight(paletteStatus));
-            }
+            wallpaperPalette.setStatusLight(ColorUtil.isShouldLight(paletteStatus));
 
-            if(paletteNavigation!=null){
-                wallpaperPalette.setNavigationLight(ColorUtil.isShouldLight(paletteNavigation));
-            }
+            wallpaperPalette.setNavigationLight(ColorUtil.isShouldLight(paletteNavigation));
 
             Intent intentPalette=new Intent(LauncherActivity.SERVICE_RECEIVER_WALLPAPER_PALETTE);
             intentPalette.putExtra(ExtrasUtil.EXTRA_SERVICE_PALETTE,wallpaperPalette);

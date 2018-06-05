@@ -1,12 +1,11 @@
 package com.xhh.launcher.custom.app;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 
 import com.tencent.bugly.crashreport.CrashReport;
 import com.xhh.launcher.custom.handler.CrashHandler;
-
-import java.util.Map;
 
 /**
  * <p>自定义Application.</p>
@@ -14,8 +13,9 @@ import java.util.Map;
  * <br/><p>自定义Application.</p>
  * @author nameh
  */
-public class NULApplication extends Application {
+public class NulApplication extends Application {
 
+    @SuppressLint("StaticFieldLeak")
     private static Context context;
 
     /**

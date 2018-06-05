@@ -1,6 +1,5 @@
 package com.xhh.launcher.custom.activity.app;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -10,11 +9,10 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.Toast;
 
 import com.xhh.launcher.custom.R;
-import com.xhh.launcher.custom.app.APPManager;
+import com.xhh.launcher.custom.app.AppManager;
 import com.xhh.launcher.custom.base.BaseActivity;
 import com.xhh.launcher.custom.base.BaseAppBarStateChangeListener;
 import com.xhh.launcher.custom.util.ExceptionUtil;
@@ -58,7 +56,7 @@ public class BugActivity extends BaseActivity implements View.OnClickListener {
     /**
      * 储存权限注册code
      */
-    private final int REQUEST_CODE_STORAGE = 1;
+    public final int REQUEST_CODE_STORAGE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -194,7 +192,7 @@ public class BugActivity extends BaseActivity implements View.OnClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                APPManager.getInstance().exitApp();
+                AppManager.getInstance().exitApp();
                 break;
             default:
                 break;
@@ -210,7 +208,7 @@ public class BugActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onBackPressed() {
-        APPManager.getInstance().exitApp();
+        AppManager.getInstance().exitApp();
         super.onBackPressed();
     }
 

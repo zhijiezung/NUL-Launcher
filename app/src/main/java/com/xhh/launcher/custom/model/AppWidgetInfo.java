@@ -3,7 +3,9 @@ package com.xhh.launcher.custom.model;
 import android.graphics.drawable.Drawable;
 
 /**
- * Created by nameh on 2018/3/21 0021.
+ *
+ * @author nameh
+ * @date 2018/3/21 0021
  */
 
 public class AppWidgetInfo {

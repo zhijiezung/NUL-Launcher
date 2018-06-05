@@ -58,6 +58,13 @@ public abstract class BaseAppBarStateChangeListener implements AppBarLayout.OnOf
             mCurrentState = State.IDLE;
         }
     }
+/**
+ * <p>appbar状态监听.</p>
+ * <p>创建时间: 2018/6/5 0005</p>
+ * <br/><p>当appbar改变后返回状态值</p>
+ * @param appBarLayout bar
+ * @param state 状态
+ */
 
     public abstract void onAppBarStateChanged(AppBarLayout appBarLayout, State state);
 }
