@@ -94,14 +94,6 @@ public class LauncherActivity extends BaseActivity {
             }
             appWidgetInfos.add(appWidgetInfo);
         }
-        findViewById(R.id.launcher_btn).setOnClickListener(v -> {
-            ListView listView = new ListView(LauncherActivity.this);
-            listView.setAdapter(new ListViewWidgetInfoAdapter(LauncherActivity.this, appWidgetInfos));
-            AlertDialog.Builder builder = new AlertDialog.Builder(LauncherActivity.this);
-            builder.setTitle("小部件");
-            builder.setView(listView);
-            builder.show();
-        });
     }
 
     @Override
