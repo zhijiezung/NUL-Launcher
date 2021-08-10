@@ -43,5 +43,4 @@ public class LauncherActivity extends BaseActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }

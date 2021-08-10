@@ -7,3 +7,5 @@
 /build/android-profile
 /captures
 .externalNativeBuild
+/.idea
+/build

@@ -1,178 +1,178 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-MERGED from [com.android.support:design:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\8e19e912a68f397062e152f52feb9c31\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\f9d0f0f8ea56913e2d2a0c882291016d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\d7aebbca0c06b32ce213a8ff785e7f7c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:2:1-11:12
-MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\3214b1dac64c1d25f3e4deca7517d55d\AndroidManifest.xml:2:1-9:12
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\ef8f7ed965b01aaf8b3e12ba205cfeae\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\02179feeb9e4ae5dd8affdc72a2ef30a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6bbfd4c6947d0cae6cf8d126ee2816f3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4039e8f14dc6464f0e8103fd1d5450d6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1563f5a6b66ecb53a9cd9215289afef0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\92a7f653bc935ad3d16c5c9a2c7bfaed\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\0a16f487795a547764d41dd1849e491d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\3959cf1b3b53557c37c35e64406b5e7c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\63dc8a7d38458dc578dbc17381bd96c3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\50e6588f19ea6b1baabaf031756649a7\AndroidManifest.xml:17:1-24:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+MERGED from [com.android.support:design:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3cbb68f749a5cffecdbbe3c6ebc0e337\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\8488be9f6d954a18427b6868efce379f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\b6440deee935ecd072380af2b5070d29\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c998c7eb467e9d429548a89df2826a4e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\78645c2ff165c3c4762f99e14dd28e46\AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\0e83db0318a88b24a7931292d7e0672a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\e24d0566360080cee479310789f513b8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\8df61ca73dd504ef736680f0390080ea\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4f6d6490d09a682bcd2f7a6693b242dd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\12a696f67e2d4e4dae897b150c2abf05\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5abb5250791d77627f9b3a16325ba53a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e81392301e039a29b5dbf0bda0f06207\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\97026d655d53b24d8531df39d31da9d1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\b6c613ba13e4a53336dff77b5f5412d0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\32681a79d06e2b5cc107fba6bc05d8cc\AndroidManifest.xml:17:1-24:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:3:5-38
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-53:12
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:1-51:12
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:5:5-75
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:5:5-75
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:5:22-72
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:5:22-72
 uses-permission#android.permission.INTERNET
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:6:5-67
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:6:22-64
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:7:22-76
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:8:5-76
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:8:5-76
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:8:22-73
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:8:22-73
 uses-permission#android.permission.READ_LOGS
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:9:5-68
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:9:22-65
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:9:22-65
 application
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:11:5-51:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:9:5-20
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:11:5-49:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c998c7eb467e9d429548a89df2826a4e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c998c7eb467e9d429548a89df2826a4e\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:18:9-40
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:12:9-43
 activity#com.xhh.launcher.custom.activity.launcher.LauncherActivity
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:20:9-34:20
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:20:9-33:20
 	android:label
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:24:13-45
 	android:excludeFromRecents
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:23:13-46
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:23:13-46
 	android:launchMode
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:25:13-44
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:25:13-44
 	android:configChanges
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:22:13-74
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:22:13-74
 	android:theme
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:26:13-53
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:26:13-53
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:21:13-63
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:21:13-63
 intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.HOME+android.intent.category.LAUNCHER
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:27:13-33:29
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:27:13-32:29
 action#android.intent.action.MAIN
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:29:27-74
 category#android.intent.category.HOME
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:31:17-73
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:30:17-73
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:31:27-70
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:30:27-70
 category#android.intent.category.DEFAULT
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:32:17-76
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:31:17-76
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:32:27-73
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:31:27-73
 activity#com.xhh.launcher.custom.activity.app.MainActivity
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:36:9-42:59
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:35:9-41:59
 	android:label
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:40:13-45
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:39:13-45
 	android:excludeFromRecents
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:39:13-46
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:38:13-46
 	android:launchMode
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:41:13-44
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:40:13-44
 	android:configChanges
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:38:13-74
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:37:13-74
 	android:theme
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:42:13-56
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:41:13-56
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:37:13-54
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:36:13-54
 activity#com.xhh.launcher.custom.activity.app.BugActivity
-ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:44:9-49:59
+ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:43:9-48:59
 	android:label
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:47:13-55
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:46:13-55
 	android:launchMode
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:48:13-44
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:47:13-44
 	android:configChanges
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:46:13-74
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:45:13-74
 	android:theme
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml:45:13-53
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml:44:13-53
 uses-sdk
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\8e19e912a68f397062e152f52feb9c31\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\8e19e912a68f397062e152f52feb9c31\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\f9d0f0f8ea56913e2d2a0c882291016d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\f9d0f0f8ea56913e2d2a0c882291016d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\d7aebbca0c06b32ce213a8ff785e7f7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\d7aebbca0c06b32ce213a8ff785e7f7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\6d69de8cb97897a70fcfe33b570f58bd\AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\3214b1dac64c1d25f3e4deca7517d55d\AndroidManifest.xml:5:5-7:41
-MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\3214b1dac64c1d25f3e4deca7517d55d\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\ef8f7ed965b01aaf8b3e12ba205cfeae\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\ef8f7ed965b01aaf8b3e12ba205cfeae\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\02179feeb9e4ae5dd8affdc72a2ef30a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\02179feeb9e4ae5dd8affdc72a2ef30a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6bbfd4c6947d0cae6cf8d126ee2816f3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6bbfd4c6947d0cae6cf8d126ee2816f3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4039e8f14dc6464f0e8103fd1d5450d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4039e8f14dc6464f0e8103fd1d5450d6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1563f5a6b66ecb53a9cd9215289afef0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1563f5a6b66ecb53a9cd9215289afef0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\92a7f653bc935ad3d16c5c9a2c7bfaed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\92a7f653bc935ad3d16c5c9a2c7bfaed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\0a16f487795a547764d41dd1849e491d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\0a16f487795a547764d41dd1849e491d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\3959cf1b3b53557c37c35e64406b5e7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\3959cf1b3b53557c37c35e64406b5e7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\63dc8a7d38458dc578dbc17381bd96c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\63dc8a7d38458dc578dbc17381bd96c3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\50e6588f19ea6b1baabaf031756649a7\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\nameh\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\50e6588f19ea6b1baabaf031756649a7\AndroidManifest.xml:20:5-22:41
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3cbb68f749a5cffecdbbe3c6ebc0e337\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3cbb68f749a5cffecdbbe3c6ebc0e337\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\8488be9f6d954a18427b6868efce379f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\8488be9f6d954a18427b6868efce379f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\b6440deee935ecd072380af2b5070d29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\b6440deee935ecd072380af2b5070d29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c998c7eb467e9d429548a89df2826a4e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\c998c7eb467e9d429548a89df2826a4e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\78645c2ff165c3c4762f99e14dd28e46\AndroidManifest.xml:5:5-7:41
+MERGED from [com.tencent.bugly:crashreport:2.6.6.1] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\crashreport-2.6.6.1.aar\78645c2ff165c3c4762f99e14dd28e46\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\0e83db0318a88b24a7931292d7e0672a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\0e83db0318a88b24a7931292d7e0672a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\e24d0566360080cee479310789f513b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\e24d0566360080cee479310789f513b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\8df61ca73dd504ef736680f0390080ea\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\8df61ca73dd504ef736680f0390080ea\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4f6d6490d09a682bcd2f7a6693b242dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\4f6d6490d09a682bcd2f7a6693b242dd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\12a696f67e2d4e4dae897b150c2abf05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\12a696f67e2d4e4dae897b150c2abf05\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5abb5250791d77627f9b3a16325ba53a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5abb5250791d77627f9b3a16325ba53a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e81392301e039a29b5dbf0bda0f06207\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e81392301e039a29b5dbf0bda0f06207\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\97026d655d53b24d8531df39d31da9d1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\97026d655d53b24d8531df39d31da9d1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\b6c613ba13e4a53336dff77b5f5412d0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\b6c613ba13e4a53336dff77b5f5412d0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\32681a79d06e2b5cc107fba6bc05d8cc\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\eNode\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\32681a79d06e2b5cc107fba6bc05d8cc\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		ADDED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
-		INJECTED from F:\androidstudio\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidProjects\NUL-Launcher\app\src\main\AndroidManifest.xml
